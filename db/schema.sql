@@ -9,7 +9,7 @@ CREATE TABLE employees (
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INTEGER(10),
-    manager_id INTEGER(10),
+    manager_id INTEGER(10)
 );
 
 CREATE TABLE roles (
@@ -21,6 +21,6 @@ CREATE TABLE roles (
 
 CREATE TABLE departments (
     id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY
-    dept_name VARCHAR(30),
+    dept_name VARCHAR(30)
 );
 
