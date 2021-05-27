@@ -2,30 +2,30 @@ const inquirer = require('inquirer');
 
 const questTask = [
     {
-        type: 'rawList',
+        type: 'list',
         name: 'task',
-        message: 'What would you like to do today?', 
+        message: 'What would you like to do today?',
         choices: [
-            new inquirer.Separator('=== View Info ==='),
-            'View All Employees',
-            'View Employees by Manager',
-            'View All Roles',
-            'View All Departments',
+            new inquirer.Separator('=== VIEW INFO ==='),
+            'View all employees',
+            'View employees by manager',
+            'View all roles',
+            'View all departments',
             new inquirer.Separator('=== ADD NEW INFO ==='),
-            'Add Employee',
-            'Add Role',
-            'Add Department',
+            'Add employee',
+            'Add role',
+            'Add department',
             new inquirer.Separator('=== UPDATE INFO ==='),
-            'Update Employee',
+            'Update employee',
             new inquirer.Separator('=== DELETE INFO ==='),
-            'Delete Employee',
-            'Delete Role',
-            'Delete Department',
+            'Delete employee',
+            'Delete role',
+            'Delete department',
             new inquirer.Separator('=== EXIT ==='),
-            'Exit Application'
+            'Exit Application',
         ],
-        pageSize: 13
+        pageSize: 17
     }
-]
+];
 
 module.exports = questTask;
