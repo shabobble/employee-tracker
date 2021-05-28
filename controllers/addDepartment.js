@@ -11,7 +11,7 @@ const addDept = (askTask) => {
     ])
     .then( (answers) => {
         console.log(answers)
-        connection.query
+        connection.query(
             'INSERT INTO departments SET ?',
             {
                 dept_name: answers.deptName,
@@ -21,7 +21,7 @@ const addDept = (askTask) => {
                 if (err) throw err;
                 console.log('Successfully added new department');
                 askTask();
-            }
+            })
     })
 }
 

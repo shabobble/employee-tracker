@@ -1,16 +1,17 @@
 
 -- Employees Starter Table
 
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Michael', 'Scott', 1, 1);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Dwight', 'Schrute', 2, 1);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Jim', 'Halpert', 3, 1);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Toby', 'Flenderson', 4, 3);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Pam', 'Beasely', 5, 2);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Darryl', 'Philbin', 6, 5);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Andy', 'Bernard', 7, 2);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Angela', 'Martin', 8, 4);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Kelly', 'Kapoor', 9, 2);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ('Kevin', 'Malone', 10, 4);
+INSERT IGNORE INTO employees (id, first_name, last_name, role_id, manager_id) VALUES
+    (1, 'Michael', 'Scott', 1, null),
+    (2, 'Dwight', 'Schrute', 2, 1),
+    (3, 'Jim', 'Halpert', 3, 1),
+    (4, 'Toby', 'Flenderson', 4, 1),
+    (5, 'Pam', 'Beasely', 5, 2),
+    (6, 'Darryl', 'Philbin', 6, 5),
+    (7, 'Andy', 'Bernard', 7, 2),
+    (8, 'Angela', 'Martin', 8, 4),
+    (9, 'Kelly', 'Kapoor', 9, 2),
+    (10, 'Kevin', 'Malone', 10, 4);
 
 
 -- Roles Starter Table

@@ -41,7 +41,7 @@ const askTask = () => {
                 
             } else if (task === 'Update employee') {
                 updateEmployee()
-                
+                .then(() => askTask());
             } else if (task === 'Delete employee') {
                 toDeleteEmployee()
                 .then((answers) => dal.deleteFrom(queries.deleteId, 'employees', Number(answers.empToDelete)))

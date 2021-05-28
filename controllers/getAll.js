@@ -32,7 +32,7 @@ const getAllDepts = async() => {
 
 const getAllManagers = async () => {
     try {
-        const rows = await queryAsync("SELECT * FROM employees WHERE manager_id IS NULL");
+        const rows = await queryAsync("SELECT * FROM employees WHERE manager_id IS NULL OR manager_id = id OR id IN (SELECT DISTINCT manager_id FROM employees)");
         return rows.map((manager) => ({name: `${manager.first_name} ${manager.last_name}`, value: manager.id}));
     } catch (err) {
         console.log('Err at getAllManagers:', err);
