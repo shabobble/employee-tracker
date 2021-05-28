@@ -18,6 +18,7 @@ const askTask = () => {
         .prompt(questTask)
         .then((answers) => {
             const task = answers.task;
+            
             if (task === 'View all employees') {
                 dal.viewAll(queries.allEmployees).then((res) => askTask());
             } else if (task === 'View employees by manager') {
