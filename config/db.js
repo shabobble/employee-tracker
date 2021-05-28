@@ -1,4 +1,5 @@
 let mysql = require('mysql');
+const { promisify } = require('util')
 
 let connection = mysql.createConnection({
     host: 'localhost',
@@ -13,4 +14,5 @@ connection.connect((err) => {
     console.log('Successfully connected to the database.');
 });
 
-module.exports = connection; 
+module.exports = connection;
+module.exports.queryPromise = promisify(connection.query.bind(connection));
