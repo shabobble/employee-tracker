@@ -24,6 +24,21 @@ const dal = {
             })
         })
     },
+    deleteFrom: function(query, table, condition) {
+        return new Promise((resolve, reject) => {
+            connection.query(query, [table, condition], (err, result) => {
+                if (err) return reject (err);
+                if(table === 'employees') {
+                    console.log('You just fired that employee. Tough break \n');
+                } else if (table === 'roles') {
+                console.log('The role was deleted from the ROLES table \n');
+                } else {
+                    console.log('The department has been deleted from the DEPARTMENTS table \n');
+            }   
+            resolve(result);
+            })
+        })
+    }
 };
 
 module.exports = dal;
